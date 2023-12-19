@@ -1,0 +1,69 @@
+.parallax-container {
+  position: fixed;
+  width: 100%;
+  background-color: black;
+}
+
+.parallax-layer {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 530px;
+}
+
+.parallax-layer.layer-0 {
+  top: 110px;
+  z-index: 6;
+  background-image: url(../assets/parallax/layer-0.webp);
+  background-position: 50% 0px;
+  background-size: 250px;
+  background-repeat: no-repeat;
+}
+
+.parallax-layer.layer-1 {
+  top: 200px;
+  z-index: 5;
+  background-image: url(../assets/parallax/layer-1.webp);
+  background-position: 50% 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.parallax-layer.layer-2 {
+  top: 600px;
+  z-index: 10;
+  background-image: url(../assets/parallax/layer-2.webp);
+  background-position: 50% 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.parallax-layer.layer-3 {
+  top: 600px;
+  z-index: 15;
+  background-image: url(../assets/parallax/layer-3.webp);
+  background-position: 50% 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.parallax-layer.layer-4 {
+  top: 700px;
+  z-index: 20;
+  background-image: url(../assets/parallax/layer-4.webp);
+  background-position: 50% 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  position: relative;
+  z-index: 50;
+  margin-top: 950px;
+}
+
+.layer-5 {
+  display: block;
+  width: 100%;
+}

@@ -1,0 +1,96 @@
+<!--
+Sources of used media and stylesheets
+
+* Parallax scrolling: https://webflow.com/made-in-webflow/website/dutchman
+* Image gallery: https://codepen.io/pehaa/pen/zYxbxQg
+* Scroll reavel animation: https://codepen.io/blakeeric/pen/MWwGpmR
+* Countdown area background image: https://imgur.com/TBJC5Wr
+* Starry background effect styles: https://codepen.io/sarazond/pen/LYGbwj
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wedding Invitation | Hoss & Ginny</title>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/parallax.css" />
+    <link rel="stylesheet" type="text/css" href="./css/stars.css" />
+
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/payung-senja");
+      @import url("https://fonts.cdnfonts.com/css/sf-distant-galaxy");
+
+      body {
+        margin: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(248, 160, 120, 1) 0%,
+          rgba(251, 180, 129, 1) 5%,
+          rgba(255, 197, 153, 1) 25%,
+          rgba(252, 205, 163, 1) 50%,
+          rgba(252, 208, 166, 1) 60%,
+          rgba(255, 215, 183, 1) 100%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parallax-container">
+      <div
+        class="parallax-layer layer-0"
+        data-parallax-speed="0.05"
+        data-max-scroll="3000"
+      ></div>
+      <div
+        class="parallax-layer layer-1"
+        data-parallax-speed="0.1"
+        data-max-scroll="3000"
+      ></div>
+      <div
+        class="parallax-layer layer-2"
+        data-parallax-speed="0.3"
+        data-max-scroll="3000"
+      ></div>
+      <div
+        class="parallax-layer layer-3"
+        data-parallax-speed="0.5"
+        data-max-scroll="3000"
+      ></div>
+      <div
+        class="parallax-layer layer-4"
+        data-parallax-speed="0.7"
+        data-max-scroll="3000"
+      ></div>
+    </div>
+
+    <div class="content">
+      <div class="stars stars1"></div>
+
+      <img class="layer-5" src="assets/parallax/layer-5.webp" />
+
+      <div class="stars stars2"></div>
+      <div class="stars stars3"></div>
+
+      <gallery-component></gallery-component>
+
+      <info-component>
+        <questionnaire-component slot="form"></questionnaire-component>
+      </info-component>
+    </div>
+
+    <script type="module" src="./js/components/gallery.js"></script>
+    <script type="module" src="./js/components/info.js"></script>
+    <script type="module" src="./js/components/questionnaire.js"></script>
+    <script type="module">
+      import { ParallaxManager } from "./js/parallax.js";
+      new ParallaxManager(".parallax-layer");
+    </script>
+  </body>
+</html>
