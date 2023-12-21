@@ -91,6 +91,7 @@ const styles = css`
     background-size: 100vw auto;
     background-position: center;
     background-attachment: fixed;
+    background-size: 120%;
 
     /* position the second container below the first container */
     top: 100vh;
