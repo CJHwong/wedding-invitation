@@ -101,7 +101,7 @@ const styles = css`
   }
 
   section {
-    background-color: #471f13;
+    background-color: #050707;
     min-height: 100vh;
     padding: 2em 2em 2em 2em;
     margin: auto;
@@ -141,9 +141,10 @@ const styles = css`
     text-decoration: none;
   }
 
-  .location-info .address {
+  .location-info .address a {
     font-family: sans-serif, ui-sans-serif, system-ui;
-    font-size: 24px;
+    font-size: 12px;
+    color: #01d9f2;
   }
 
   @media (max-width: 800px) {
@@ -155,6 +156,12 @@ const styles = css`
     .location-info .address {
       font-size: 16px;
     }
+  }
+
+  iframe {
+    max-width: 100%;
+    background-color: #fae5b9;
+    border-radius: 8px;
   }
 `;
 
@@ -222,7 +229,7 @@ class Component extends LitElement {
         viewBox="0,0,256,256"
       >
         <g
-          fill="#ffffff"
+          fill="lightblue"
           fill-rule="nonzero"
           stroke="none"
           stroke-width="1"
@@ -274,6 +281,18 @@ class Component extends LitElement {
                   ${googleMap.icon} ${googleMap.address}
                 </a>
               </p>
+            </div>
+
+            <div style="margin-bottom: 64px;">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3613.536282166664!2d121.5523542!3d25.0837016!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ad7e7479d027%3A0x5b6a14ae3fb2e3dc!2zQ0hBTEVUIFYg5YyX576O55Sf5rS75oSf5pep5Y2I6aSQ!5e0!3m2!1szh-TW!2stw!4v1703168799716!5m2!1szh-TW!2stw"
+                width="400"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
 
             <slot name="form"></slot>
