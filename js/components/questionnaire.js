@@ -232,7 +232,6 @@ class Component extends LitElement {
       min-height: 600px;
       width: 100%;
       height: 100%;
-      background-color: #fae5b9;
       border-radius: 8px;
     }
   `;
@@ -273,7 +272,7 @@ class Component extends LitElement {
 
         <iframe
           loading="lazy"
-          src="https://docs.google.com/forms/d/e/1FAIpQLScsGzbYSyTP5tl7QtVun-3CBttNdrUevHtL6xZzqvXJYLJnLA/viewform?embedded=true"
+          src="https://docs.google.com/forms/d/e/1FAIpQLScsGzbYSyTP5tl7QtVun-3CBttNdrUevHtL6xZzqvXJYLJnLA/viewform"
           frameborder="0"
           marginheight="0"
           marginwidth="0"
