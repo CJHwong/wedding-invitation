@@ -77,10 +77,6 @@ const LAYOUTS = [
     src: "./assets/gallery/2019_2.webp",
   },
   {
-    style: "slower",
-    src: "./assets/gallery/2019_3.webp",
-  },
-  {
     style: "vertical",
     src: "./assets/gallery/2018_1.webp",
     title: "2018.01",
