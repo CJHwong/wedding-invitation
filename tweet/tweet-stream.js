@@ -2,18 +2,14 @@ import { getMessagesFromGoogleSheet } from "./google.js";
 import { sleep } from "./utils.js";
 
 async function getMessages() {
-  try {
-    const data = await getMessagesFromGoogleSheet();
-    return data
-      .map((e) => ({
-        name: e[0],
-        text: e[1],
-      }))
-      .filter((e_1) => !!e_1.text) // Filter out empty messages
-      .sort(() => Math.random() - 0.5); // Shuffle the messages
-  } catch (error) {
-    return console.error("Error:", error);
-  }
+  const data = await getMessagesFromGoogleSheet();
+  return data
+    .map((e) => ({
+      name: e[0],
+      text: e[1],
+    }))
+    .filter((e_1) => !!e_1.text) // Filter out empty messages
+    .sort(() => Math.random() - 0.5); // Shuffle the messages
 }
 
 function getAvatar(username) {
@@ -72,14 +68,18 @@ function getNextTweet(container, username, text, lastTweet) {
 
 export async function startTweetStream(container) {
   let lastTweet;
-  let tweets;
+  let lastTweets;
 
   while (true) {
+    let tweets;
     try {
       tweets = await getMessages();
     } catch (error) {
       console.error("Error:", error);
+      tweets = lastTweets;
     }
+
+    lastTweets = tweets;
 
     for (const t of tweets) {
       lastTweet = getNextTweet(container, t.name, t.text, lastTweet);
