@@ -1,5 +1,5 @@
 // This key will only live until May 4th.
-const API_KEY = "AIzaSyBGdqlZ__MpYWww2nCmOzGY1S9UcK31JcA";
+const API_KEY = "AIzaSyDXWHLKHwePQILYFT6mt19H6bTVX1-jZNk";
 const GOOGLE_SHEET_ID = "1ik82_qiMtygUaEPlGZuVEDR4ttbK7H_4bG-19x1OgSM";
 
 async function getValuesFromGoogleSheet(range) {
